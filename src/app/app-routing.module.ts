@@ -15,6 +15,15 @@ const routes: Routes = [
     path: 'primera',
     loadChildren: () => import('./primera/primera.module').then( m => m.PrimeraPageModule)
   },
+  // Si paso datos no puedo llamar a la pagina sin pasar datos
+  {
+    path: 'cinco/:cartelito',
+    loadChildren: () => import('./cinco/cinco.module').then( m => m.CincoPageModule)
+  },
+  {
+    path: 'seis/:personaje',
+    loadChildren: () => import('./seis/seis.module').then( m => m.SeisPageModule)
+  },
 ];
 
 @NgModule({
