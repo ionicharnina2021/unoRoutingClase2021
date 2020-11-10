@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'primera',
+    loadChildren: () => import('./primera/primera.module').then( m => m.PrimeraPageModule)
+  },
 ];
 
 @NgModule({
